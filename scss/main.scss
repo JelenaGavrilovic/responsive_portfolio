@@ -31,6 +31,10 @@ h1, h2, h3 {
     }
 }
 
+li {
+    list-style: none;
+}
+
 a {
     color: $light;
     text-decoration: none;
