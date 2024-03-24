@@ -93,6 +93,7 @@ main {
     border: 3px solid $secondary-color;
     width: 250px;
     height: 250px;
+    object-fit: cover;
 }
 .bio {
     grid-area: bio;
@@ -115,6 +116,53 @@ main {
 }
 h5 {
     margin: 1rem 0;
+}
+
+// Work/Projects
+.projects {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+
+
+    img {
+        width: 100%;
+        border: 3px solid $light;
+        border-start-start-radius: 20px;
+        border-start-end-radius: 20px;
+
+        &:hover {
+            border: 3px solid $secondary-color;
+            opacity: 0.5;
+            @include easeOut;
+        }
+    }
+}
+
+// Button Styles
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+
+    &:hover {
+        background: $secondary-color;
+        color: $light;
+    }
+}
+
+.btn-dark {
+    @extend .btn;
+    background-color: darken($primary-color, 50);
+    color: $light;
+    border-end-start-radius: 20px;
+    border-end-end-radius: 20px;
+}
+.btn-light {
+    @extend .btn;
+    background-color: lighten($primary-color, 50);
+    color: $primary-color;
 }
 
 #main-footer {
