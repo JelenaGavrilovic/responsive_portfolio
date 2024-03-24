@@ -139,6 +139,33 @@ h5 {
     }
 }
 
+// Contact Page Style
+
+.boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 75%;
+    margin-top: 1rem;
+
+    div {
+        font-size: 1.5rem;
+        border: 3px solid $light;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+
+        &:hover {
+            padding: 0.5rem 1.5rem;
+            background: $secondary-color;
+            color: $light;
+
+            span {
+                color: black;
+            }
+        }
+    }
+}
+
 // Button Styles
 .btn {
     display: block;
