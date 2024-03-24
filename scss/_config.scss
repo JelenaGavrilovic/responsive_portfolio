@@ -31,6 +31,16 @@ $background-opacity: 0.5;
     }
 }
 
+// Set Text Color (if you want to use this, u need to add function name into config colors; video5)
+@function set-text-color($color) {
+    @if (lightness($color) > 40){
+        @return #000;
+    } @else {
+        @return #fcfffd;
+    }
+}
+
+
 // Media Query Mixins
 @mixin mediaSm {
      @media screen and (max-width: 500px) {
